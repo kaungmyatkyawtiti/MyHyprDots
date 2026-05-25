@@ -1,0 +1,297 @@
+/* ======================
+   GRUVBOX DARK HARD PALETTE
+====================== */
+/* @define-color background #1d2021; */
+@define-color background alpha(#1d2021, 0.85);
+@define-color foreground #ebdbb2;
+@define-color accent #fe8019;
+@define-color color3 #b8bb26;
+@define-color color6 #8ec07c;
+@define-color critical #fb4934;
+@define-color warning #fabd2f;
+@define-color color2 #458588;
+
+/* ======================
+   GLOBAL
+====================== */
+
+* {
+  border: none;
+  min-height: 0px;
+  font-family: "AdwaitaMono Nerd Font";
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.modules-left {
+  margin-left: 0px;
+}
+
+.modules-right {
+  padding-top: 1px;
+  margin-right: 0px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* ======================
+   EMPTY STATE
+====================== */
+
+window#waybar.empty #window {
+  background: transparent;
+  border-radius: 0px;
+  color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+#waybar.empty .modules-center {
+  opacity: 0;
+}
+
+/* ======================
+   WORKSPACES
+====================== */
+
+#workspaces {
+  padding: 0 5px;
+  margin: 0.5px 0.5px;
+  border-radius: 16px;
+}
+
+#workspaces button {
+  padding: 0px 12px;
+  margin: 0px 1px;
+  background-color: @background;
+  color: @foreground;
+  border-radius: 4px;
+  transition: all 250ms ease;
+}
+
+/* #workspaces button:hover { */
+/*   background: @foreground; */
+/*   color: @background; */
+/*   border-radius: 12px; */
+/*   transition: all 0.1s ease; */
+/* } */
+
+#workspaces button.persistent {
+  color: @foreground;
+}
+
+/* #workspaces button.persistent:hover { */
+/*   background-color: @foreground; */
+/*   color: @background; */
+/* } */
+
+#workspaces button.active,
+#workspaces button.active.empty {
+  background-color: @foreground;
+  color: @background;
+  margin: 0px 2px;
+  min-width: 32px;
+  font-weight: 900;
+}
+
+#workspaces button.empty {
+  color: alpha(@foreground, 0.5);
+  background-color: @background;
+}
+
+/**/
+/* #workspaces button.empty { */
+/*   color: alpha(@foreground, 0.5); */
+/*   background-color: @background; */
+/* } */
+#workspaces button:first-child {
+  border-radius: 16px 4px 4px 16px;
+}
+
+#workspaces button:last-child {
+  border-radius: 4px 16px 16px 4px;
+}
+
+/* ======================
+   MODULE GROUPS
+====================== */
+
+#group-misc,
+#group_misc,
+#misc,
+#group-ctl,
+#group_ctl,
+#ctl,
+#group-stats,
+#group_stats,
+#group-batt,
+#batt,
+#stats {
+  background-color: @background;
+  color: @foreground;
+  font-weight: bold;
+  margin-right: 4px;
+  border-radius: 4px;
+  padding: 0px 6px;
+}
+
+#group-ctl,
+#group_ctl,
+#ctl {
+  border-radius: 16px 4px 4px 16px;
+}
+
+#group-misc-expander,
+#group_misc-expander,
+#misc-expander {
+  margin-right: 3px;
+  border-radius: 16px;
+}
+
+/* ======================
+   CLOCK + battery
+====================== */
+#group-time,
+#group_time,
+#time {
+  background-color: @background;
+  color: @foreground;
+  font-weight: bold;
+  border-radius: 4px 16px 16px 4px;
+  padding: 0px 6px 0px 4px;
+  margin-right: 2px;
+}
+
+#language {
+  margin: 0px 8px;
+}
+
+#clock {
+  background-color: transparent;
+  padding: 0px 2px;
+}
+
+#battery.warning:not(.charging) {
+  background-color: transparent;
+  color: @warning;
+  animation-name: blinking;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Critical State (Red text animation) */
+#battery.critical:not(.charging) {
+  background-color: transparent;
+  color: @critical;
+  animation-name: blinking;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blinking {
+  to {
+    color: @foreground;
+  }
+}
+
+/* ======================
+   SYSTEM MODULE SPACING
+====================== */
+#pulseaudio,
+#backlight {
+  min-width: 12px;
+  margin: 0px 4px;
+}
+
+#bluetooth {
+  margin-right: 6px;
+}
+
+#network {
+  margin-left: 5px;
+  margin-right: 12px;
+}
+
+#custom-expand-icon {
+  margin-right: 6px;
+}
+
+#memory {
+  margin-right: 2px;
+}
+
+#power-profiles-daemon {
+  padding-right: 10px;
+}
+
+/* ======================
+   TRAY
+====================== */
+#tray {
+  background: alpha(@foreground, 0);
+  border-radius: 16px;
+  padding: 0 5px;
+  margin: 3.5px 0px;
+  margin-right: 1px;
+  margin-left: -2px;
+}
+
+/* ======================
+   CUSTOM MODULES
+====================== */
+
+#custom-arch {
+  border-radius: 8px;
+  color: @color2;
+  background-color: @background;
+  padding: 0px 12.5px 0px 9px;
+  margin: 1px;
+}
+
+/* ======================
+   POWER PROFILES
+====================== */
+
+#power-profiles-daemon.performance {
+  color: @critical;
+  /* Gruvbox Bright Red */
+}
+
+#power-profiles-daemon.balanced {
+  color: @color6;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @color3;
+}
+
+#window {
+  background-color: @background;
+  color: @foreground;
+  border-radius: 16px;
+  margin-top: 1px;
+  padding: 0px 10px;
+}
+
+/* ======================
+   TOOLTIP
+====================== */
+
+tooltip {
+  background: @background;
+  border: 1px solid @color2;
+}
+
+tooltip label {
+  color: @foreground;
+}

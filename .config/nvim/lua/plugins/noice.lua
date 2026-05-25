@@ -1,0 +1,26 @@
+return {
+  {
+    "folke/noice.nvim",
+    opts_extend = { "routes" },
+    opts = {
+      routes = {
+        {
+          filter = {
+            event = "lsp",
+            kind = "progress",
+            find = "jdtls",
+          },
+          opts = { skip = true },
+        },
+        {
+          filter = {
+            event = "lsp",
+            kind = "progress",
+            find = "pyright",
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
+}

@@ -1,0 +1,14 @@
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+configuration {
+    show-icons:      true;
+    icon-theme:      "Papirus-Dark";
+    display-drun:    "";
+    disable-history: false;
+    font: "AdwaitaMono Nerd Font 12";
+}
+
+#window {
+    border-radius:    12;
+    border-color:   #458588;
+}
