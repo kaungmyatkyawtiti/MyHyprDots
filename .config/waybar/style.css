@@ -2,7 +2,7 @@
    GRUVBOX DARK HARD PALETTE
 ====================== */
 /* @define-color background #1d2021; */
-@define-color background alpha(#1d2021, 0.85);
+@define-color background alpha(#1d2021, 0.88);
 @define-color foreground #ebdbb2;
 @define-color accent #fe8019;
 @define-color color3 #b8bb26;

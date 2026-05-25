@@ -301,6 +301,9 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 -- Toggle maximized mode (fullscreen with gaps/bars)
 hl.bind(mainMod .. " + M ", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 
+-- Lock screen instantly using hyprlock on power button press
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
+
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
