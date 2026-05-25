@@ -100,9 +100,6 @@ end
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-# Created by `pipx` on 2025-07-13 08:42:29
-set PATH $PATH /home/nott_eucalyptus/.local/bin
-
 # Fish vi key bindings
 fish_vi_key_bindings
 
@@ -115,6 +112,6 @@ end
 # pnpm end
 
 # opencode
-# fish_add_path /home/nott_eucalyptus/.opencode/bin
+fish_add_path /home/nott_eucalyptus/.opencode/bin
 
 set --universal nvm_default_version latest
