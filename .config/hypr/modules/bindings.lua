@@ -32,6 +32,9 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(cliphist))
 
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("networkmanager_dmenu"))
 
+-- Launch Ghostty
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("ghostty"))
+
 -- Launch Yazi File Manager
 hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd(terminal .. " -e yazi"))
 
