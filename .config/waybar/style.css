@@ -1,12 +1,10 @@
 /* Gruvbox Dark Hard Palette */
-@define-color bg-hard alpha(#1d2021, 0.96);
-@define-color bg-1 #3c3836;
+@define-color bg-hard alpha(#1d2021, 0.94);
 @define-color fg #ebdbb2;
 @define-color fg-dark #a89984;
 
 /* Gruvbox Accents */
 @define-color gruv-red #cc241d;
-@define-color gruv-red2 #fb4934;
 @define-color gruv-green #b8bb26;
 @define-color gruv-yellow #fabd2f;
 @define-color gruv-aqua #8ec07c;
@@ -22,6 +20,7 @@
 * {
   font-family: "AdwaitaMono Nerd Font";
   font-size: 13px;
+  border-radius: 8px;
 }
 
 window#waybar {
@@ -31,7 +30,7 @@ window#waybar {
 
 #workspaces button {
   padding: 4px 10px;
-  margin: 4px 0px 4px 7px;
+  margin: 5px 0px 5px 6px;
   background: transparent;
   border-radius: 6px;
   color: @fg;
@@ -59,18 +58,18 @@ window#waybar {
 #memory,
 #clock,
 #language {
-  border-radius: 6px;
-  padding: 4px 8px;
-  background: @bg-1;
-  margin: 4px 10px 4px 0px;
+  border-radius: 0;
+  padding: 4px;
+  margin: 5px 12px 5px 0px;
 }
 
 #battery {
-  padding: 4px 4px 4px 8px;
+  padding: 4px 0px 4px 4px;
 }
 
+#battery,
 #clock {
-  box-shadow: inset 0 -3px @gruv-red2;
+  box-shadow: inset 0 -3px @gruv-blue2;
 }
 
 #cpu,
@@ -78,10 +77,9 @@ window#waybar {
   box-shadow: inset 0 -3px @gruv-pink2;
 }
 
-#battery,
 #stats,
 #language {
-  box-shadow: inset 0 -3px @gruv-blue2;
+  box-shadow: inset 0 -3px @gruv-aqua2;
 }
 
 #battery.warning:not(.charging) {
@@ -111,21 +109,19 @@ window#waybar {
 
 #pulseaudio,
 #backlight,
-#network,
-#bluetooth {
-  padding: 0px 6px;
+#bluetooth,
+#network {
+  padding-right: 12px;
 }
 
-#network {
-  padding-right: 14px;
+#pulseaudio {
+  padding-left: 6px;
 }
 
 #custom-arch {
-  border-radius: 4px;
-  padding: 4px 12px 4px 9px;
-  background: @bg-1;
-  margin: 4px 6px;
-  color: @gruv-blue;
+  padding: 4px 8px;
+  margin: 5px;
+  color: @gruv-blue2;
   font-size: 18px;
 }
 
@@ -135,11 +131,9 @@ window#waybar {
 }
 
 #misc-expander {
-  border-radius: 16px 2px 2px 16px;
+  border-radius: 20px 2px 2px 20px;
   padding: 4px 10px;
-  background: @bg-1;
-  margin: 4px 6px 4px 0px;
-  box-shadow: inset 0 -3px @gruv-aqua2;
+  margin: 5px 6px 5px 0px;
 }
 
 #power-profiles-daemon {

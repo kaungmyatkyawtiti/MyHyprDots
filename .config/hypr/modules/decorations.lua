@@ -12,7 +12,7 @@ hl.config({
 		border_size = 2,
 
 		col = {
-			active_border = "rgba(458588ff)",
+			active_border = "rgba(8ec07cff)",
 			inactive_border = "rgba(665c54ff)",
 		},
 
@@ -26,7 +26,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 12,
+		rounding = 8,
 		rounding_power = 2,
 
 		-- Change transparency of focused and unfocused windows

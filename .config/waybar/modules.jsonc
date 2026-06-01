@@ -119,15 +119,23 @@
     "on-click": "kitty -e btop"
   },
   "network": {
-    "format": "",
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-disconnected": "󰤭", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "󰖪",
-    "max-length": 60
+    "interval": 3,
+    "spacing": 1,
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "󰤮",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "networkmanager_dmenu"
   },
   "clock": {
     "format": " {:%I:%M %p}",
@@ -178,7 +186,7 @@
     "tooltip-format": "Application Menu\n\nSuper + Return"
   },
   "custom/expand-icon": {
-    "format": "",
+    "format": " ",
     "tooltip": false
   },
   "tray": {
