@@ -5,7 +5,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
 local sans_font = "Inter 10"
-local mono_font = "AdwaitaMono Nerd Font 10"
+local mono_font = "JetBrainsMono Nerd Font 10"
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar & hyprpaper & hypridle")
