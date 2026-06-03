@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 44,
+  "height": 43,
   "border-radius": 25,
   "margin-top": 2,
   "margin-left": 6,
@@ -17,10 +17,9 @@
   ],
   "modules-right": [
     "group/misc-expander",
-    "cpu",
-    "memory",
-    "hyprland/language",
     "group/stats",
+    "hyprland/language",
+    "group/control",
     "battery",
     "clock"
   ],

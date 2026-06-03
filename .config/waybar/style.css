@@ -54,11 +54,10 @@ window#waybar {
 
 #battery,
 #stats,
-#cpu,
-#memory,
-#clock,
-#language {
-  border-radius: 0;
+#language,
+#control,
+#clock {
+  border-radius: 0px;
   padding: 4px;
   margin: 5px 12px 5px 0px;
 }
@@ -72,13 +71,19 @@ window#waybar {
   box-shadow: inset 0 -3px @gruv-blue2;
 }
 
-#cpu,
-#memory {
+#stats {
   box-shadow: inset 0 -3px @gruv-pink2;
 }
 
-#stats,
 #language {
+  box-shadow: inset 0 -3px @gruv-aqua2;
+}
+
+#cpu {
+  padding-right: 14px;
+}
+
+#control {
   box-shadow: inset 0 -3px @gruv-aqua2;
 }
 

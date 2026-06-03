@@ -204,13 +204,20 @@
       "power-saver": ""
     }
   },
-  "group/stats": {
+  "group/control": {
     "orientation": "inherit",
     "modules": [
       "pulseaudio",
       "backlight",
       "bluetooth",
       "network"
+    ]
+  },
+  "group/stats": {
+    "orientation": "inherit",
+    "modules": [
+      "cpu",
+      "memory"
     ]
   },
   "group/misc-expander": {
