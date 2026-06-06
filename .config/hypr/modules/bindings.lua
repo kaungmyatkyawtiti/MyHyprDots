@@ -45,7 +45,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + M ", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 
 -- Lock screen instantly using hyprlock on power button press
-hl.bind("XF86PowerOff", hl.dsp.exec_cmd("wlogout"))
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("pgrep wlogout || wlogout"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -57,6 +57,12 @@ hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+
+-- Resize windows with mainMod + CTRL + Vim keys
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
 
 -- Hyprshot Screen Capture Keybindings (Hyprland Lua API Syntax)
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region --freeze"))

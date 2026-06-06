@@ -32,12 +32,12 @@ hl.window_rule({
 })
 
 -- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
+local overlayLayerRule = hl.layer_rule({
+	name = "no-anim-overlay",
+	match = { namespace = "^my-overlay$" },
+	no_anim = true,
+})
+overlayLayerRule:set_enabled(true)
 
 -- Hyprland-run windowrule
 hl.window_rule({
@@ -47,3 +47,23 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
+
+hl.layer_rule({
+	match = { namespace = "waybar" },
+	blur = true,
+	no_anim = true,
+})
+
+hl.layer_rule({
+	match = { namespace = "rofi" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+local wlogoutLayerRule = hl.layer_rule({
+	match = { namespace = "logout_dialog" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+wlogoutLayerRule:set_enabled(true)
