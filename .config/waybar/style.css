@@ -29,7 +29,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 4px 10px;
+  padding: 4px 8px;
   margin: 5px 0px 5px 6px;
   background: transparent;
   border-radius: 6px;
@@ -130,7 +130,7 @@ window#waybar {
   padding-left: 6px;
 }
 
-#custom-arch {
+#custom-launcher {
   padding: 4px 8px;
   margin: 5px;
   color: @gruv-blue2;

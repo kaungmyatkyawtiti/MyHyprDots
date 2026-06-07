@@ -5,7 +5,7 @@ configuration {
     icon-theme:      "Papirus-Dark";
     display-drun:    "";
     disable-history: false;
-    font: "JetBrainsMono Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 11";
 }
 
 #window {

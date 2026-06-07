@@ -9,7 +9,7 @@
   "margin-left": 6,
   "margin-right": 6,
   "modules-left": [
-    "custom/arch",
+    "custom/launcher",
     "hyprland/workspaces"
   ],
   "modules-center": [
