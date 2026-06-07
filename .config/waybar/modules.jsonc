@@ -51,6 +51,13 @@
       "(.*) - com.obsproject.Studio": "  $1 "
     }
   },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
   "battery": {
     "interval": 5,
     "format": "{capacity}% {icon}",
@@ -224,7 +231,8 @@
     "orientation": "inherit",
     "modules": [
       "custom/expand-icon",
-      "power-profiles-daemon"
+      "power-profiles-daemon",
+      "idle_inhibitor"
     ],
     "drawer": {
       "transition-duration": 400,
