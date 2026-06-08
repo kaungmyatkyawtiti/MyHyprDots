@@ -52,10 +52,17 @@ hl.layer_rule({
 	match = { namespace = "waybar" },
 	blur = true,
 	no_anim = true,
+	ignore_alpha = 0.5,
 })
 
 hl.layer_rule({
 	match = { namespace = "rofi" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+hl.layer_rule({
+	match = { namespace = "notifications" },
 	blur = true,
 	ignore_alpha = 0.5,
 })
