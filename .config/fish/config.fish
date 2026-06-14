@@ -115,3 +115,6 @@ end
 fish_add_path /home/nott_eucalyptus/.opencode/bin
 
 set --universal nvm_default_version latest
+
+export PATH="/home/nottnott/.lando/bin:$PATH"; #landopath
+

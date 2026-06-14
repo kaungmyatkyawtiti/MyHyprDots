@@ -36,7 +36,9 @@ hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("networkmanager_dmenu"))
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("ghostty"))
 
 -- Launch Yazi File Manager
-hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd(terminal .. " -e yazi"))
+hl.bind(mainMod .. " + CTRL + Y", hl.dsp.exec_cmd(terminal .. " -e yazi"))
+
+hl.bind(mainMod .. " + CTRL + M", hl.dsp.exec_cmd(terminal .. " -e cmus"))
 
 -- Toggle standard fullscreen
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))

@@ -67,6 +67,22 @@ hl.layer_rule({
 	ignore_alpha = 0.5,
 })
 
+-- Assign workspaces 1-5 to eDP-1
+for i = 1, 5 do
+	hl.workspace_rule({
+		workspace = tostring(i),
+		monitor = "eDP-1",
+	})
+end
+
+-- Assign workspaces 6-10 to HDMI-A-1
+for i = 6, 10 do
+	hl.workspace_rule({
+		workspace = tostring(i),
+		monitor = "HDMI-A-1",
+	})
+end
+
 local wlogoutLayerRule = hl.layer_rule({
 	match = { namespace = "logout_dialog" },
 	blur = true,
