@@ -30,7 +30,7 @@
         "eDP-1"
       ],
       "6": [
-        "HDMI-A-1"
+        "eDP-1"
       ],
       "7": [
         "HDMI-A-1"
@@ -69,7 +69,8 @@
       "(.*Steam)...(.*)": "   $1",
       "(.*imv)...(.*).. (.*)": "   $2",
       "(.*) - com.obsproject.Studio": "  $1 "
-    }
+    },
+    "on-click": ""
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -113,6 +114,7 @@
     },
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "on-click": "",
     "states": {
       "warning": 20,
       "critical": 10

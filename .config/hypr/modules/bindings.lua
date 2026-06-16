@@ -10,6 +10,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local volume = "~/.config/hypr/scripts/volume.sh"
 local brightness = "~/.config/hypr/scripts/brightness.sh"
 local capslock = "~/.config/hypr/scripts/capslock.sh"
+local colorPicker = "~/.config/hypr/scripts/color-picker.sh"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(terminal))
@@ -47,7 +48,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + M ", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 
 -- Lock screen instantly using hyprlock on power button press
-hl.bind("XF86PowerOff", hl.dsp.exec_cmd("pgrep wlogout || wlogout"))
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -93,7 +94,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Rofimoji and Hyprpicker Binds
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("rofimoji"))
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprpicker --autocopy"))
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(colorPicker))
 
 -- Laptop multimedia keys for volume and LCD brightness
 -- hl.bind(
