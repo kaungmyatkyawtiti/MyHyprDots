@@ -39,6 +39,15 @@ local overlayLayerRule = hl.layer_rule({
 })
 overlayLayerRule:set_enabled(true)
 
+-- Force file dialogs to be floating
+hl.window_rule({
+	name = "force-floating-file-dialog",
+	match = {
+		title = "^(Save File|Open File|Save As|Open|Select File|Select Folder)$",
+	},
+	float = true,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
 	name = "move-hyprland-run",

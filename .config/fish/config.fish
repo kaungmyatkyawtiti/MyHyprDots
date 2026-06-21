@@ -89,7 +89,6 @@ alias gitfiles='cd ~/MyGitFiles/'
 alias rain='terminal-rain --rain-color white --lightning-color yellow'
 alias lzd='lazydocker'
 alias gg='google-chrome'
-alias zed='zeditor'
 
 # Optional: for interactive-specific commands
 if status is-interactive
@@ -116,5 +115,5 @@ fish_add_path /home/nott_eucalyptus/.opencode/bin
 
 set --universal nvm_default_version latest
 
-export PATH="/home/nottnott/.lando/bin:$PATH"; #landopath
-
+export PATH="/home/nottnott/.lando/bin:$PATH"
+#landopath
