@@ -43,7 +43,7 @@ overlayLayerRule:set_enabled(true)
 hl.window_rule({
 	name = "force-floating-file-dialog",
 	match = {
-		title = "^(Save File|Open File|Save As|Open|Select File|Select Folder)$",
+		title = "^(Save File|Open Files|Save As|Open|Select File|Select Folder)$",
 	},
 	float = true,
 })

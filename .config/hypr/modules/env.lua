@@ -2,7 +2,7 @@
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
--- hl.env("GTK_THEME", "Gruvbox-B-LB-Dark")
+hl.env("GTK_THEME", "Gruvbox-BL-LB-Dark")
 
 hl.env("XCURSOR_THEME", "Bibata-Modern-Amber")
 hl.env("XCURSOR_SIZE", "24")
