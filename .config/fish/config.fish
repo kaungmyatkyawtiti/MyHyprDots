@@ -33,7 +33,10 @@ set -gx FZF_DEFAULT_OPTS \
     '--color=marker:#8ec07c,spinner:#cc241d,header:#fabd2f'
 
 set -gx fish_user_paths ~/.config/composer/vendor/bin $fish_user_paths
-set -gx JAVA_HOME /usr/lib/jvm/default
+
+set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk
+set -gx PATH $JAVA_HOME/bin $PATH
+
 # set -gx MAVEN_OPTS "--enable-native-access=ALL-UNNAMED"
 set -x MAVEN_OPTS "--sun-misc-unsafe-memory-access=allow --enable-final-field-mutation=ALL-UNNAMED"
 

@@ -39,15 +39,26 @@ local overlayLayerRule = hl.layer_rule({
 })
 overlayLayerRule:set_enabled(true)
 
--- Force file dialogs to be floating
+-- Force file dialogs to be floating and stay on the active workspace
 hl.window_rule({
 	name = "force-floating-file-dialog",
 	match = {
-		title = "^(Save File|Open Files|Save As|Open|Select File|Select Folder)$",
+		-- Expanded titles to catch Telegram and other portal pickers
+		title = "^(Save File|Open Files|Save As|Open|Select File|Select Folder|Choose Files)$",
 	},
 	float = true,
+	workspace = "current",
 })
 
+-- Explicitly catch the XDG Desktop Portal (the most common culprit)
+hl.window_rule({
+	name = "xdg-desktop-portal-floating",
+	match = {
+		class = "xdg-desktop-portal-gtk",
+	},
+	float = true,
+	workspace = "current",
+})
 -- Hyprland-run windowrule
 hl.window_rule({
 	name = "move-hyprland-run",

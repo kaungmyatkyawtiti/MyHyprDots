@@ -19,7 +19,8 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb") -- Qt fallback
 hl.env("SDL_VIDEODRIVER", "wayland") -- SDL2 Games/Apps
 hl.env("CLUTTER_BACKEND", "wayland") -- Clutter Apps
 
-hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "2")
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
+hl.env("QT_SCALE_FACTOR", "2")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "2")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct") -- Use with qt5ct/Kvantum
 

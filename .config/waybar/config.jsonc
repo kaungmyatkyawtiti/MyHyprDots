@@ -8,7 +8,7 @@
   "margin-left": 4,
   "margin-right": 4,
   "modules-left": [
-    "custom/launcher",
+    "image#profile",
     "hyprland/workspaces"
   ],
   "modules-center": [

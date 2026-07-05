@@ -208,11 +208,11 @@
       ""
     ]
   },
-  "custom/launcher": {
-    "format": "󰣇",
-    "on-click": "rofi -show drun",
-    "on-click-right": "xdg-terminal-exec",
-    "tooltip-format": "Application Menu\n\nSuper + Return"
+  "image#profile": {
+    "path": "/home/nottnott/.config/waybar/girl.png",
+    "size": 26,
+    "tooltip": false,
+    "on-click": "rofi -show drun"
   },
   "custom/expand-icon": {
     "format": " ",
